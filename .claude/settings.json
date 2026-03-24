@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"from PIL import Image; print\\(''PIL available''\\)\")",
+      "Bash(sips -g all appIcon.png)",
+      "Bash(ls -la \"/Users/tavanarasi/Documents/islam yolu site/\"appIcon*)"
+    ]
+  }
+}

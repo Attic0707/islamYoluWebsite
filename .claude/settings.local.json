@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sips -z 32 32 appIcon.png --out favicon.png)",
+      "Bash(sips -z 180 180 appIcon.png --out apple-touch-icon.png)"
+    ]
+  }
+}
