@@ -1,19 +1,17 @@
 /* =========================
    İslam Yolu — Dark Green Islamic Palette
-   Drop-in styles.css
-   (No URL/email changes required)
    ========================= */
 
 :root{
-  --bg0:#07140f;         /* deep green */
-  --bg1:#0a1e16;         /* deep green alt */
-  --panel:#0e2a1f;       /* card base */
-  --panel2:#0b2119;      /* muted section */
-  --text:#eef7f0;        /* near-white */
-  --muted:#b7d1c1;       /* soft mint */
-  --muted2:#86aa98;      /* muted text */
-  --gold:#d6b66d;        /* warm gold */
-  --gold2:#bda25d;       /* deeper gold */
+  --bg0:#07140f;
+  --bg1:#0a1e16;
+  --panel:#0e2a1f;
+  --panel2:#0b2119;
+  --text:#eef7f0;
+  --muted:#b7d1c1;
+  --muted2:#86aa98;
+  --gold:#d6b66d;
+  --gold2:#bda25d;
   --line:rgba(214,182,109,.18);
   --shadow: 0 18px 50px rgba(0,0,0,.35);
   --shadow2: 0 12px 30px rgba(0,0,0,.28);
@@ -22,6 +20,9 @@
 }
 
 *{ box-sizing:border-box; }
+html{
+  scroll-behavior:smooth;
+}
 html,body{ height:100%; }
 body{
   margin:0;
@@ -151,6 +152,12 @@ a:hover{ text-decoration:underline; }
   font-size:22px;
   letter-spacing:.2px;
 }
+.section-subtitle{
+  margin:0 0 24px;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.6;
+}
 .section-muted{
   background: linear-gradient(180deg, rgba(14,42,31,.30), rgba(11,33,25,.22));
   border-top:1px solid rgba(214,182,109,.12);
@@ -220,6 +227,41 @@ a:hover{ text-decoration:underline; }
 }
 .primary-btn:active{
   transform: translateY(0px);
+}
+
+/* Store buttons (App Store / Google Play style) */
+.store-btn{
+  color:#0b2119;
+  background:
+    radial-gradient(70px 40px at 25% 25%, rgba(255,255,255,.30), transparent 60%),
+    linear-gradient(135deg, var(--gold), var(--gold2));
+  padding:10px 20px;
+  gap:10px;
+}
+.store-btn:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 14px 34px rgba(0,0,0,.28);
+}
+.store-btn:active{
+  transform: translateY(0px);
+}
+.store-btn svg{
+  flex-shrink:0;
+}
+.store-btn span{
+  display:flex;
+  flex-direction:column;
+  text-align:left;
+  line-height:1.2;
+}
+.store-btn span small{
+  font-size:11px;
+  font-weight:600;
+  opacity:.7;
+}
+.store-btn span{
+  font-size:16px;
+  font-weight:800;
 }
 
 .hero-note{
@@ -302,9 +344,60 @@ a:hover{ text-decoration:underline; }
 }
 
 /* =========================
+   Steps (How It Works)
+   ========================= */
+.steps-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap:16px;
+  margin-top:14px;
+}
+
+.step-card{
+  border-radius: var(--radius);
+  padding:24px 18px 20px;
+  background:
+    radial-gradient(220px 160px at 20% 10%, rgba(214,182,109,.10), transparent 70%),
+    linear-gradient(180deg, rgba(14,42,31,.58), rgba(11,33,25,.52));
+  border:1px solid rgba(214,182,109,.14);
+  box-shadow: 0 10px 26px rgba(0,0,0,.18);
+  text-align:center;
+}
+
+.step-number{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  display:inline-grid;
+  place-items:center;
+  font-weight:900;
+  font-size:18px;
+  color:#0b2119;
+  background: linear-gradient(135deg, var(--gold), var(--gold2));
+  margin-bottom:14px;
+}
+
+.step-card h3{
+  margin:0 0 8px;
+  font-size:16px;
+}
+.step-card p{
+  margin:0;
+  color:var(--muted);
+  font-size:14.5px;
+  line-height:1.6;
+}
+
+/* =========================
    Grids / Cards
    ========================= */
-.features-grid,
+.features-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap:16px;
+  margin-top:14px;
+}
+
 .faq-grid{
   display:grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -321,6 +414,11 @@ a:hover{ text-decoration:underline; }
     linear-gradient(180deg, rgba(14,42,31,.58), rgba(11,33,25,.52));
   border:1px solid rgba(214,182,109,.14);
   box-shadow: 0 10px 26px rgba(0,0,0,.18);
+}
+
+.feature-icon{
+  font-size:28px;
+  margin-bottom:10px;
 }
 
 .feature-card h3,
@@ -340,6 +438,165 @@ a:hover{ text-decoration:underline; }
 
 .faq-item a{
   font-weight:800;
+}
+
+/* =========================
+   Social Media Section
+   ========================= */
+.social-section{
+  text-align:center;
+}
+
+.social-grid{
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:8px;
+}
+
+.social-card{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:18px 28px;
+  border-radius: var(--radius);
+  background:
+    radial-gradient(220px 160px at 20% 10%, rgba(214,182,109,.10), transparent 70%),
+    linear-gradient(180deg, rgba(14,42,31,.58), rgba(11,33,25,.52));
+  border:1px solid rgba(214,182,109,.14);
+  box-shadow: 0 10px 26px rgba(0,0,0,.18);
+  color:var(--text);
+  text-decoration:none !important;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  min-width:240px;
+}
+.social-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0,0,0,.30);
+  border-color: rgba(214,182,109,.30);
+}
+.social-card svg{
+  color:var(--gold);
+  flex-shrink:0;
+}
+.social-card strong{
+  display:block;
+  font-size:16px;
+}
+.social-card small{
+  display:block;
+  color:var(--muted);
+  font-size:13px;
+  margin-top:2px;
+}
+
+/* =========================
+   CTA Section
+   ========================= */
+.cta-section{
+  text-align:center;
+  padding:64px 0;
+}
+.cta-inner h2{
+  margin:0 0 10px;
+  font-size: clamp(22px, 2.8vw, 34px);
+}
+.cta-inner p{
+  margin:0 0 24px;
+  color:var(--muted);
+  font-size:16px;
+}
+.cta-inner .hero-buttons{
+  justify-content:center;
+}
+
+/* =========================
+   Blog Cards
+   ========================= */
+.blog-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap:16px;
+  margin-top:14px;
+}
+
+.blog-card{
+  border-radius: var(--radius);
+  padding:22px 20px 18px;
+  background:
+    radial-gradient(220px 160px at 20% 10%, rgba(214,182,109,.10), transparent 70%),
+    linear-gradient(180deg, rgba(14,42,31,.58), rgba(11,33,25,.52));
+  border:1px solid rgba(214,182,109,.14);
+  box-shadow: 0 10px 26px rgba(0,0,0,.18);
+  text-decoration:none !important;
+  color:var(--text);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  display:block;
+}
+.blog-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0,0,0,.30);
+  border-color: rgba(214,182,109,.30);
+}
+.blog-card h3{
+  margin:0 0 8px;
+  font-size:17px;
+}
+.blog-card p{
+  margin:0;
+  color:var(--muted);
+  font-size:14.5px;
+  line-height:1.6;
+}
+.blog-card .blog-meta{
+  margin-top:12px;
+  font-size:12.5px;
+  color:var(--muted2);
+}
+
+/* =========================
+   Page Content (privacy, terms, support, blog articles)
+   ========================= */
+.page-header{
+  margin-bottom:28px;
+}
+.page-title{
+  margin:0 0 8px;
+  font-size: clamp(24px, 3vw, 36px);
+}
+.page-subtitle{
+  margin:0;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.6;
+}
+
+.page-content h2{
+  margin:28px 0 10px;
+  font-size:19px;
+  color:var(--text);
+}
+.page-content h3{
+  margin:20px 0 8px;
+  font-size:16px;
+  color:var(--text);
+}
+.page-content p{
+  margin:0 0 12px;
+  color:var(--muted);
+  line-height:1.7;
+  font-size:15px;
+}
+.page-content ul{
+  margin:0 0 12px;
+  padding-left:22px;
+  color:var(--muted);
+  line-height:1.7;
+  font-size:15px;
+}
+.page-content a{
+  font-weight:700;
 }
 
 /* =========================
@@ -363,10 +620,31 @@ a:hover{ text-decoration:underline; }
   letter-spacing:.2px;
 }
 
+.footer-social{
+  display:flex;
+  gap:10px;
+  margin:8px 0;
+}
+.footer-social a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:34px;
+  height:34px;
+  border-radius:10px;
+  border:1px solid rgba(214,182,109,.18);
+  color:var(--gold);
+  transition: all .15s ease;
+}
+.footer-social a:hover{
+  background: rgba(214,182,109,.10);
+  border-color: rgba(214,182,109,.35);
+  text-decoration:none;
+}
+
 .footer-meta{
   color:var(--muted2);
   font-size:12.5px;
-  margin-top:6px;
 }
 
 .footer-links{
@@ -398,6 +676,9 @@ a:hover{ text-decoration:underline; }
   .hero-card{
     order:2;
   }
+  .features-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 720px){
@@ -405,8 +686,14 @@ a:hover{ text-decoration:underline; }
   .header-inner{ padding:12px 0; }
   .brand-subtitle{ display:none; }
   .features-grid,
-  .faq-grid{
+  .faq-grid,
+  .blog-grid{
+    grid-template-columns: 1fr;
+  }
+  .steps-grid{
     grid-template-columns: 1fr;
   }
   .btn{ width:100%; }
+  .store-btn{ justify-content:center; }
+  .social-card{ min-width:100%; }
 }

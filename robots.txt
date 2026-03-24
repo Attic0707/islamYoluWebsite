@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://islam-yolu.com/sitemap.xml
