@@ -3,7 +3,10 @@
     "allow": [
       "Bash(python3 -c \"from PIL import Image; print\\(''PIL available''\\)\")",
       "Bash(sips -g all appIcon.png)",
-      "Bash(ls -la \"/Users/tavanarasi/Documents/islam yolu site/\"appIcon*)"
+      "Bash(ls -la \"/Users/tavanarasi/Documents/islam yolu site/\"appIcon*)",
+      "Bash(grep -l \"analytics.js\" \"/Users/tavanarasi/Documents/islam yolu site\"/*.html \"/Users/tavanarasi/Documents/islam yolu site\"/blog/*.html)",
+      "Bash(grep -l \"hamburger\" \"/Users/tavanarasi/Documents/islam yolu site\"/*.html \"/Users/tavanarasi/Documents/islam yolu site\"/blog/*.html)",
+      "Bash(grep -l \"G-XXXXXXXXXX\" \"/Users/tavanarasi/Documents/islam yolu site\"/*.html \"/Users/tavanarasi/Documents/islam yolu site\"/blog/*.html)"
     ]
   }
 }

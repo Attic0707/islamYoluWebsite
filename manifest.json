@@ -1,0 +1,36 @@
+{
+  "name": "İslam Yolu",
+  "short_name": "İslam Yolu",
+  "description": "Ezan vakitleri, namaz hatırlatıcı, Kur'an-ı Kerim ve günlük ilham",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060f0b",
+  "theme_color": "#0c2219",
+  "icons": [
+    {
+      "src": "/appIcon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/appIcon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "lang": "tr",
+  "dir": "ltr",
+  "categories": ["lifestyle", "religion"],
+  "related_applications": [
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/us/app/islam-yolu/id6755595522"
+    },
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.tavanarasi.islamyolu",
+      "id": "com.tavanarasi.islamyolu"
+    }
+  ],
+  "prefer_related_applications": true
+}

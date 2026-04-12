@@ -14,7 +14,24 @@
   <meta property="og:site_name" content="İslam Yolu" />
   <meta property="og:locale" content="tr_TR" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0c2219" />
   <link rel="stylesheet" href="styles.css" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BCTYJ84CHM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BCTYJ84CHM');
+  </script>
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wak36hg03f");
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -33,6 +50,9 @@
         <a href="privacy.html" class="nav-link">Gizlilik</a>
         <a href="terms.html" class="nav-link">Koşullar</a>
       </nav>
+      <button class="hamburger" aria-label="Menüyü aç/kapat" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
@@ -104,5 +124,7 @@
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </footer>
+
+  <script src="analytics.js"></script>
 </body>
 </html>

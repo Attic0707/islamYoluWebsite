@@ -865,6 +865,75 @@ a:hover{ text-decoration:underline; }
 }
 
 /* =========================
+   Mobile Hamburger Menu
+   ========================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: 1px solid rgba(214,182,109,.18);
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--gold);
+  border-radius: 2px;
+  transition: transform .3s ease, opacity .3s ease;
+  transform-origin: center;
+}
+.hamburger[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================
+   Back to Top Button
+   ========================= */
+.back-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(214,182,109,.25);
+  background: rgba(14,42,31,.92);
+  color: var(--gold);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0,0,0,.30);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .3s ease, transform .3s ease, background .2s ease, border-color .2s ease;
+  pointer-events: none;
+}
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.back-to-top:hover {
+  background: rgba(214,182,109,.15);
+  border-color: rgba(214,182,109,.50);
+}
+
+/* =========================
    Responsive
    ========================= */
 @media (max-width: 980px){
@@ -906,4 +975,26 @@ a:hover{ text-decoration:underline; }
   .ornament::after {
     width:40px;
   }
+
+  /* Hamburger: show button, hide inline nav */
+  .hamburger { display: flex; }
+  .site-header { overflow: visible; }
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    padding: 8px 20px 16px;
+    background: rgba(6,15,11,.97);
+    border-bottom: 1px solid rgba(214,182,109,.12);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    z-index: 49;
+  }
+  .nav.open { display: flex; }
+  .nav-link { padding: 12px 16px; }
 }
