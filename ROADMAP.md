@@ -147,8 +147,8 @@ Increase organic traffic to islam-yolu.com and maximize app downloads (App Store
 | 🟡 P2 | Analytics (GA4 + Clarity) — IDs needed | Medium | Low | CODE READY |
 | ⚪ P3 | Ramazan blog article | Medium | Medium | TODO |
 | ⚪ P3 | Social proof / testimonials | Medium | Medium | TODO |
-| ⚪ P3 | manifest.json (PWA) | Low | Low | TODO |
-| ⚪ P3 | English version | High | High | TODO |
+| ⚪ P3 | manifest.json (PWA) | Low | Low | DONE |
+| ⚪ P3 | English version | High | High | DONE |
 
 ---
 

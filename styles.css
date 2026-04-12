@@ -631,6 +631,90 @@ a:hover{ text-decoration:underline; }
 }
 
 /* =========================
+   Stats / Social Proof
+   ========================= */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0 40px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 28px 20px 24px;
+  border-radius: var(--radius);
+  background:
+    radial-gradient(200px 150px at 50% 0%, rgba(214,182,109,.10), transparent 70%),
+    linear-gradient(180deg, rgba(14,42,31,.55), rgba(11,33,25,.48));
+  border: 1px solid rgba(214,182,109,.13);
+  box-shadow: var(--shadow-card);
+  transition: transform .2s ease, border-color .2s ease;
+}
+.stat-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(214,182,109,.25);
+}
+
+.stat-number {
+  font-size: clamp(28px, 3.2vw, 40px);
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: -.5px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  color: var(--muted);
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.testimonial-card {
+  border-radius: var(--radius);
+  padding: 22px 20px 20px;
+  background:
+    radial-gradient(200px 150px at 20% 0%, rgba(214,182,109,.07), transparent 70%),
+    linear-gradient(180deg, rgba(14,42,31,.50), rgba(11,33,25,.45));
+  border: 1px solid rgba(214,182,109,.10);
+  box-shadow: var(--shadow-card);
+  transition: transform .2s ease, border-color .2s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(214,182,109,.22);
+}
+
+.testimonial-stars {
+  color: var(--gold);
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.testimonial-text {
+  color: var(--text);
+  font-size: 14.5px;
+  line-height: 1.7;
+  font-style: italic;
+  margin: 0 0 14px;
+}
+
+.testimonial-author {
+  color: var(--muted2);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================
    CTA Section
    ========================= */
 .cta-section{
@@ -968,6 +1052,10 @@ a:hover{ text-decoration:underline; }
   .btn{ width:100%; }
   .store-btn{ justify-content:center; }
   .social-card{ min-width:100%; }
+  .stats-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
   .hero-text h1 {
     font-size: clamp(26px, 6vw, 36px);
   }
