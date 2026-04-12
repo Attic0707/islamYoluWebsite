@@ -8,22 +8,23 @@ Increase organic traffic to islam-yolu.com and maximize app downloads (App Store
 ## Current State Analysis
 
 ### What exists:
-- 8+ static HTML pages: index, blog index, 4 blog articles, privacy, support, terms
+- 18 static HTML pages: TR + EN versions of index, blog, privacy, support, terms + 8 blog articles
 - Premium dark green/gold Islamic theme with geometric SVG background patterns
 - App Store & Google Play download links with SVG badge buttons
 - Full SEO foundation: meta tags, Open Graph, Twitter Cards, JSON-LD structured data
-- sitemap.xml, robots.txt, canonical URLs, hreflang tags
-- Blog with 4 SEO-optimized articles
+- sitemap.xml (with hreflang annotations), robots.txt, canonical URLs
+- Blog with 4 articles in TR + 4 matching EN articles
 - Social media integration (Facebook & TikTok) in footer + dedicated section
-- Scroll animations (fade-in on scroll)
-- Ornamental Islamic dividers between sections
-- Inter + Amiri font pairing
+- Scroll animations, mobile hamburger menu, back-to-top button
+- GA4 + Microsoft Clarity analytics with app_download_click conversion events
+- Social proof section (stats + testimonials) on homepage
+- manifest.json, PWA-ready
 
 ### What's remaining:
-- **SEO**: WebSite schema with SearchAction, manifest.json
-- **Content**: 1 more blog article (Ramazan), download stats / social proof
-- **Visual**: Mobile hamburger menu, back-to-top button
-- **Growth**: Analytics (GA4, FB Pixel, TikTok Pixel), OG image asset
+- **Content**: Ramazan article, city-specific landing pages, comparison article
+- **Growth**: Smart App Banner, Facebook Pixel, TikTok Pixel, Apple Search Ads, Ramadan campaign
+- **ASO**: Better screenshots, preview video, in-app rating prompt
+- **Assets**: og-image.png
 
 ---
 
@@ -75,10 +76,10 @@ Increase organic traffic to islam-yolu.com and maximize app downloads (App Store
 
 ### 2.3 Enhanced Homepage Content
 - [x] Add a "Nasıl Çalışır?" (How It Works) section with 3 steps
-- [ ] Add a download statistics / social proof section
+- [x] Add a download statistics / social proof section
 - [x] Add a "Bizi Takip Et" section with Facebook & TikTok links
 - [x] Strengthen CTA buttons with app store icon SVGs
-- [ ] Add a testimonial or review section
+- [x] Add a testimonial / review section
 
 ---
 
@@ -119,15 +120,55 @@ Increase organic traffic to islam-yolu.com and maximize app downloads (App Store
 - [ ] Create a QR code section for easy mobile scanning
 - [ ] Add app screenshots carousel (when assets are available)
 
-### 4.3 Future SEO Content
-- [ ] Build a Ramazan (Ramadan) landing page seasonally
-- [ ] Create comparison pages ("İslam Yolu vs diğer uygulamalar")
-- [ ] Add a "Günün Ayeti" (Verse of the Day) widget that updates
-- [ ] Consider English version for broader reach
+### 4.3 Content SEO Expansion
+- [ ] Build a Ramazan (Ramadan) dedicated landing page — seasonal, very high traffic spike
+- [ ] Create comparison article ("En İyi Ezan Vakitleri Uygulaması 2026") — captures high-intent search
+- [ ] Create city-specific prayer time landing pages (İstanbul, Ankara, İzmir) — massive local SEO volume
+- [x] English version for broader reach (TR/EN bilingual site done)
+- [ ] Arabic version for largest Muslim language market (long-term)
 
-### 4.4 Assets Needed
+### 4.4 Website → App Conversion
+- [ ] Add Smart App Banner (`<meta name="apple-itunes-app">`) — shows native iOS download prompt to mobile visitors
+- [ ] Add Android Smart Banner (custom JS banner for Android visitors to website)
+- [ ] Add QR code section on homepage — for desktop visitors to scan and download
+- [ ] Add app screenshots carousel on homepage (when assets are available)
+- [ ] Create a dedicated `/download` landing page with feature highlights + both store CTAs
+
+### 4.5 Paid User Acquisition
+- [ ] **Apple Search Ads** — highest ROI paid channel for apps; target "ezan vakitleri", "namaz hatırlatıcı", "prayer times app" keywords; very high intent, lower competition than Meta
+- [ ] Facebook Pixel integration (already in plan) → enables Meta App Install Ads retargeting
+- [ ] TikTok Pixel integration (already in plan) → enables TikTok App Install campaign
+- [ ] Meta (Facebook/Instagram) App Install Ads — target Muslims by religious interest (prayer, mosque, Quran)
+- [ ] Google Universal App Campaigns (UAC) — shown across Google Search, YouTube, Play Store simultaneously
+
+### 4.6 ASO (App Store Optimization) — App-side
+> These are changes in App Store Connect / Google Play Console, not the website — but they are the #1 driver of organic downloads.
+- [ ] Audit and optimize app title & subtitle with target keywords ("Ezan Vakitleri · Namaz Hatırlatıcı")
+- [ ] Create 5–8 professional screenshots showing key features — this is the biggest conversion factor on the store listing
+- [ ] Record a 15–30 second preview/promo video for both stores
+- [ ] A/B test screenshots and icon using App Store Connect Product Page Optimization
+- [ ] Add in-app rating prompt (SKStoreReviewAPI / Play Core) at a high-satisfaction moment (e.g., after successfully seeing prayer times for the first time, or after reading 5 verses)
+- [ ] Respond to all App Store / Play Store reviews publicly — signals active developer, improves ranking
+- [ ] Localize App Store listing to Arabic + English subtitles
+
+### 4.7 Ramadan Campaign (Annual — biggest opportunity)
+> Ramadan is when Islamic app downloads spike 3–5×. Plan this 4–6 weeks in advance.
+- [ ] Ramazan landing page (islam-yolu.com/ramazan) with iftar/sahur time focus + download CTA
+- [ ] Ramazan blog article (TR + EN) — "Ramazan'a hazırlık" — targets high-traffic seasonal search
+- [ ] App Store screenshots swap for Ramadan (add iftar countdown, sahur reminder visual)
+- [ ] Social media content calendar for Ramadan (30 days of posts scheduled in advance)
+- [ ] Paid ads budget increase during Ramadan window (~2 weeks before to 2 weeks after start)
+
+### 4.8 Community & Word of Mouth
+- [ ] Create a printable QR code poster/card (A5) for distribution at mosques and Islamic centers
+- [ ] Engage in relevant communities: Reddit (r/islam, r/Muslim), Facebook Islamic groups — share helpful blog posts (not spam)
+- [ ] Reach out to Islamic lifestyle bloggers / YouTubers for app mentions
+- [ ] Add "Share this app" button or deeplink inside the app itself
+
+### 4.9 Assets Needed
 - [ ] Create og-image.png from og-image-template.html (screenshot at 1200x630)
-- [ ] Ensure appIcon.png is in project root (favicon + brand mark depend on it)
+- [ ] Professional app screenshots (5+ per store, localized TR/EN)
+- [ ] 30-second preview video for App Store / Google Play
 
 ---
 
@@ -138,23 +179,42 @@ Increase organic traffic to islam-yolu.com and maximize app downloads (App Store
 | 🔴 P0 | SEO meta tags + structured data | Very High | Low | DONE |
 | 🔴 P0 | sitemap.xml + robots.txt | High | Very Low | DONE |
 | 🔴 P0 | Social media links (FB + TikTok) | High | Low | DONE |
-| 🟠 P1 | Blog page + 4 articles | Very High | High | DONE |
-| 🟠 P1 | Enhanced homepage (how it works, CTA) | High | Medium | DONE |
-| 🟠 P1 | Visual upgrade (patterns, animations, fonts) | High | Medium | DONE |
-| 🟡 P2 | Favicon + app icon | Medium | Low | DONE |
+| 🟠 P1 | Blog page + articles (TR + EN) | Very High | High | DONE |
+| 🟠 P1 | Enhanced homepage + social proof | High | Medium | DONE |
+| 🟠 P1 | Visual upgrade + UX (hamburger, back-to-top) | High | Medium | DONE |
+| 🟠 P1 | Analytics (GA4 + Clarity + conversion events) | Very High | Low | DONE |
+| 🟠 P1 | English version (full bilingual site) | High | High | DONE |
+| 🟡 P2 | **Smart App Banner** (mobile web → app, 1 line) | High | Very Low | DONE |
+| 🟡 P2 | **Apple Search Ads** (highest intent paid channel) | Very High | Medium | TODO |
+| 🟡 P2 | **ASO: screenshots + subtitle keywords** (app-side) | Very High | Medium | TODO |
+| 🟡 P2 | **In-app rating prompt** (review flywheel) | High | Low | TODO |
+| 🟡 P2 | Ramazan landing page + campaign | Very High | Medium | TODO |
 | 🟡 P2 | og-image.png asset creation | Medium | Low | Template ready |
-| 🟡 P2 | Mobile hamburger menu | Medium | Medium | DONE |
-| 🟡 P2 | Analytics (GA4 + Clarity) — IDs needed | Medium | Low | CODE READY |
-| ⚪ P3 | Ramazan blog article | Medium | Medium | TODO |
-| ⚪ P3 | Social proof / testimonials | Medium | Medium | TODO |
-| ⚪ P3 | manifest.json (PWA) | Low | Low | DONE |
-| ⚪ P3 | English version | High | High | DONE |
+| ⚪ P3 | Facebook Pixel + Meta App Install Ads | High | Low | TODO |
+| ⚪ P3 | TikTok Pixel + TikTok App Install Ads | High | Low | TODO |
+| ⚪ P3 | Ramazan blog article (TR + EN) | Medium | Medium | TODO |
+| ⚪ P3 | City-specific prayer time pages (SEO) | High | Medium | TODO |
+| ⚪ P3 | Comparison article ("en iyi ezan uygulaması") | High | Medium | TODO |
+| ⚪ P3 | QR code section on homepage | Medium | Low | TODO |
+| ⚪ P3 | /download dedicated landing page | Medium | Low | TODO |
+| ⚪ P4 | App screenshots carousel (website) | Medium | Medium | TODO |
+| ⚪ P4 | App preview video (store listing) | High | High | TODO |
+| ⚪ P4 | Mosque/community QR poster (printable) | Medium | Low | TODO |
+| ⚪ P4 | Arabic localization (app + site) | Very High | Very High | Future |
 
 ---
 
+## Key Insight: Where Downloads Actually Come From
+
+1. **App Store search (ASO)** — ~60% of app installs come from store search. This is the highest leverage area. Better screenshots + subtitle keywords + reviews = more organic installs on autopilot.
+2. **Apple Search Ads** — People searching "prayer times app" or "ezan vakitleri" are ready to install. Very low CPA compared to Meta ads.
+3. **Ramadan spike** — One well-executed Ramadan campaign can double your total install base. Plan 6 weeks ahead.
+4. **Web → App funnel** — The website already gets visits. Smart App Banner converts those mobile visitors for free.
+5. **Review flywheel** — More reviews → higher store ranking → more organic visibility → more reviews. The in-app rating prompt starts this loop.
+
 ## Notes
 - The site is pure static HTML/CSS/JS — no build step needed, changes deploy immediately
-- All content is in Turkish (lang="tr") targeting Turkish-speaking Muslim audience
+- Bilingual site: Turkish (primary) + English (secondary), both fully SEO-optimized
 - App links: [App Store](https://apps.apple.com/us/app/islam-yolu/id6755595522) | [Google Play](https://play.google.com/store/apps/details?id=com.tavanarasi.islamyolu)
 - Social: [Facebook](https://www.facebook.com/share/1E1125eAk6/?mibextid=wwXIfr) | [TikTok](https://www.tiktok.com/@islamyoluapp)
 - OG image template available at og-image-template.html — open in browser and screenshot at 1200x630
