@@ -196,7 +196,7 @@ Increase organic traffic to islam-yolu.com and maximize app downloads (App Store
 | ⚪ P3 | City-specific prayer time pages (SEO) | High | Medium | TODO |
 | ⚪ P3 | Comparison article ("en iyi ezan uygulaması") | High | Medium | TODO |
 | ⚪ P3 | QR code section on homepage | Medium | Low | TODO |
-| ⚪ P3 | /download dedicated landing page | Medium | Low | TODO |
+| ⚪ P3 | /download dedicated landing page | Medium | Low | DONE |
 | ⚪ P4 | App screenshots carousel (website) | Medium | Medium | TODO |
 | ⚪ P4 | App preview video (store listing) | High | High | TODO |
 | ⚪ P4 | Mosque/community QR poster (printable) | Medium | Low | TODO |
