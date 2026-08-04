@@ -6,10 +6,8 @@
  *   2. Back-to-top button (injected dynamically)
  *   3. Mobile hamburger menu toggle
  *
- * NOTE: Before going live, replace the placeholder IDs in the <head> analytics
- * snippets of every HTML page:
- *   GA4     → replace  G-XXXXXXXXXX  with your Measurement ID from analytics.google.com
- *   Clarity → replace  XXXXXXXXXX    with your Project ID from clarity.microsoft.com
+ * GA4/Clarity themselves are loaded by consent.js, only after the visitor
+ * opts in via the cookie banner — see consent.js for the IDs and gating logic.
  */
 (function () {
   'use strict';
